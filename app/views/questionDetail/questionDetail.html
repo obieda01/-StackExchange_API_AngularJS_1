@@ -17,9 +17,9 @@
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="item in QuestionCtrl.siteInfo.items track by $index" ng-click="">
+        <tr ng-repeat="item in QuestionCtrl.siteInfo.items track by $index">
             <td>{{$index+1}}</td>
-            <td> <a href="#"> {{item.title}}</a></td>
+            <td> <a ui-sref="question({id:item.question_id})" ng-click=""> {{item.title}}</a></td>
             <td>{{item.view_count}}</td>
             <td>{{item.answer_count}}</td>
         </tr>
