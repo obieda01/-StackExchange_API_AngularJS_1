@@ -1,9 +1,9 @@
 <div class="row">
     <div class="col-md-12">
-        <h1>questions</h1>
+        <h1>ggggggggggggggggggggggggggggggggggg</h1>
         This is version
         <vr-version></vr-version>
-        <p class="text-success">ddd!</p>
+        <p class="text-success">ddd! {{id}}</p>
     </div>
 </div>
 
@@ -11,15 +11,15 @@
     <thead>
         <tr>
             <th>#</th>
-            <th>Questions</th>
+            <th>Question</th>
             <th>View Count</th>
             <th>Answer Count</th>
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="item in QuestionsCtrl.siteInfo.items track by $index">
+        <tr ng-repeat="item in QuestionCtrl.siteInfo.items track by $index" ng-click="">
             <td>{{$index+1}}</td>
-            <td> <a ui-sref="question({id:item.question_id})" ng-click=""> {{item.title}}</a></td>
+            <td> <a href="#"> {{item.title}}</a></td>
             <td>{{item.view_count}}</td>
             <td>{{item.answer_count}}</td>
         </tr>
@@ -27,5 +27,5 @@
 </table>
 
 
-<div ng-if="QuestionsCtrl.stackOverflowError">{{QuestionsCtrl.stackOverflowError}}</div>
-<script src="/questions.js"></script>
+<div ng-if="QuestionCtrl.stackOverflowError">{{QuestionCtrl.stackOverflowError}}</div>
+<script src="/question.js"></script>

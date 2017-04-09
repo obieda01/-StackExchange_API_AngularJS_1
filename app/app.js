@@ -15,6 +15,5 @@ angular.module('aver.stack_overflow_test', [
     $locationProvider.html5Mode({
         enabled: true
     });
-
     $urlRouterProvider.otherwise('/questions');
 });
