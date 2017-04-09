@@ -16,5 +16,5 @@ angular.module('aver.stack_overflow_test', [
         enabled: true
     });
 
-    $urlRouterProvider.otherwise('/view1');
+    $urlRouterProvider.otherwise('/questions');
 });
