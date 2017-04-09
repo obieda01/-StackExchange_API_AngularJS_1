@@ -1,11 +1,12 @@
 'use strict';
-var stackoverflow = require('stackoverflow_questions/stackoverflow');
+var stackoverflow = require('services/questionsService/stackoverflow');
+var stackoverflowquestion = require('services/stackoverflow_questionDetail/stackoverflow');
+
 var angular = require('angular');
 var angularUIRouter = require('angular-ui-router');
 var templateUrl = require('./questions.html');
-import { QuestionComponent } from './question.component';
 
-module.exports = angular.module('aver.stack_overflow_test.questions', [angularUIRouter, stackoverflow])
+module.exports = angular.module('aver.stack_overflow_test.questions', [angularUIRouter, stackoverflow, stackoverflowquestion])
 
 .config(function($stateProvider, $controllerProvider) {
 
@@ -16,17 +17,9 @@ module.exports = angular.module('aver.stack_overflow_test.questions', [angularUI
         controllerAs: 'QuestionsCtrl',
         templateUrl: templateUrl
     };
-    $stateProvider
-        .state(questionsState);
+    $stateProvider.state(questionsState);
 
-    var questionState = {
-        name: 'question',
-        url: '/questions/:id',
-        controller: 'QuestionCtrl',
-        controllerAs: 'QuestionCtrl',
-        templateUrl: templateUrl
-    };
-    $stateProvider.state(questionState);
+
 })
 
 .controller('QuestionsCtrl', function($scope, StackOverflow) {
@@ -42,5 +35,6 @@ module.exports = angular.module('aver.stack_overflow_test.questions', [angularUI
 
 
 })
+
 
 .name;
