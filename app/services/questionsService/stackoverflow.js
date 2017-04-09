@@ -2,7 +2,7 @@
 
 var angular = require('angular');
 
-var StackOverflowService = angular.module('aver.demoApp.stackOverflowService', []);
+var StackOverflowService = angular.module('aver.stack_overflow_test.question', []);
 
 StackOverflowService.factory('StackOverflow', ['$http', '$q', function($http, $q) {
     var urlBase = 'http://api.stackexchange.com/2.2';
