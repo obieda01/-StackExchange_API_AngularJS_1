@@ -1,9 +1,9 @@
 'use strict';
 
 var angular = require('angular').mock;
-var moduleName = require('./view1.js');
+var moduleName = require('./questions.html');
 
-describe('View1 controller', function() {
+describe('questions controller', function() {
 
     beforeEach(function() {
         angular.module(moduleName);
@@ -13,7 +13,7 @@ describe('View1 controller', function() {
         });
 
         var scope = this.$rootScope.$new();
-        this.ctrl = this.$controller('View1Ctrl', {
+        this.ctrl = this.$controller('QuestionsCtrl', {
             $scope: scope
         });
     });

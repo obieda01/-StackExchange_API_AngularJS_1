@@ -1,34 +1,32 @@
 'use strict';
-var stackoverflow = require('services/stackoverflow_questionDetail/stackoverflow');
+var stackoverflow = require('services/questionDetailService/stackoverflow_questionDetail');
 var angular = require('angular');
 var angularUIRouter = require('angular-ui-router');
 var templateUrl = require('./questionDetail.html');
 
 module.exports = angular.module('aver.stack_overflow_test.question', [angularUIRouter, stackoverflow])
+    .config(function($stateProvider) {
 
-.controller('QuestionCtrl', function($scope, StackOverflow, $http, $stateParams) {
-    $scope.id = $stateParams.id;
-    var vm = this;
-    vm.title = 'View 2 Title';
-    StackOverflow.getInfo()
-        .then(function(data) {
-            vm.siteInfo = data;
-        }, function(error) {
-            vm.stackOverflowError = error;
-        });
-})
+        var questionState = {
+            name: 'question',
+            url: '/questions/:id',
+            controller: 'QuestionCtrl',
+            controllerAs: 'QuestionCtrl',
+            templateUrl: templateUrl
+        };
+        $stateProvider.state(questionState);
 
-.config(function($stateProvider) {
-
-    var questionState = {
-        name: 'question',
-        url: '/questions/:id',
-        controller: 'QuestionCtrl',
-        controllerAs: 'QuestionCtrl',
-        templateUrl: templateUrl
-    };
-    $stateProvider.state(questionState);
-
-})
+    })
+    .controller('QuestionCtrl', function($scope, StackOverflow, $http, $stateParams) {
+        $scope.id = $stateParams.id;
+        var vm = this;
+        vm.title = 'View 2 Title';
+        StackOverflow.getInfo()
+            .then(function(data) {
+                vm.siteInfo = data;
+            }, function(error) {
+                vm.stackOverflowError = error;
+            });
+    })
 
 .name;
