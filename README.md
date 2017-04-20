@@ -1,7 +1,3 @@
-# The Assignment
-
-Complete the following using this front-end project
-and the [StackExchange API](https://api.stackexchange.com/docs):
 
 ### Part 1 - question list
 
@@ -17,15 +13,6 @@ You don't need to recreate every single element of the standard question page - 
    * DO show the comment box when the user clicks "Add Comment" but DON'T worry about submitting to the server.
    * DON'T worry about the hover effect tooltip cards for people and tags.
 
-
-## Requirements
-
-*Write production-quality code* - we want to see how your best code looks.
-
-Return your solution in the form of a zip archive. *Please exclude your `/node_modules` and `dist` directories*.
-
-You may utilize any existing internet resource that you like, but don’t, for example, post a question on a forum soliciting help. When sending us your solution, please tell us what types of online resources you used (e.g. StackOverflow code samples, existing work you found on GitHub, etc.)
-
 ## The StackExchange API:
 
 Here are some relevant API calls to get you started:
@@ -38,17 +25,6 @@ Here are some relevant API calls to get you started:
 The [StackExchange API documentation](https://api.stackexchange.com/docs) is quite good, reference it as needed. 
 
 The StackEchange API has a quota of 300 requests per day, so watch out for that. It will also throttle requests if you make too many too rapidly.
-
-## This goes without saying, but…
-
-Please don’t get help from anyone else while you work on this project - this should be strictly your own work, though as noted above you may use online resources as long as they are properly attributed.
-
-When you’re done with this project, please don’t share the assignment or your solution with anyone.
-
-
-# Using the project
-
-We've provided you with a fully-functional front-end stack for this assigment; here's how to use it.
 
 
 ### Prerequisites
@@ -67,8 +43,7 @@ Use the following command to compile the code.
 
     npm run build
 
-This command compiles the front-end code into the `/dist` directory. It does **not**
-start a server that serves the compiled code, it only compiles it.
+This command compiles the front-end code into the `/dist` directory. It does 
 
 ### Run the app locally
 
@@ -114,9 +89,6 @@ We use `eslint` for linting - the configuration can be found in `eslintrc.json`.
     npm run --silent lint
 
 The `--silent` suppresses spurious node errors when linting fails.
-
-# Happy Coding!
-
 
 
 [git]: https://git-scm.com/
