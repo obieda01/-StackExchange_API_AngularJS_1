@@ -6,12 +6,7 @@ Create a simple question list page (`/questions`) that lists 20 questions from S
 ### Part 2 - question page
 
 Create a question details page (`/questions/:question_id`) that queries the StackExchange API for question details and recreates the [standard StackOverflow question page](http://stackoverflow.com/questions/327654/hashtable-to-dictionary-syncroot/). 
-You don't need to recreate every single element of the standard question page - see the image `StackOverflowExample.png` in this folder for details on which areas of the page you should recreate and which you can disregard. Specifically: 
-   * DO use [BootstrapCSS](http://getbootstrap.com/css/) style definitions. We're not going to be nitpicking you on pixel alignment here since Bootstrap styles won't be identical to StackOverflow's styles, but DO try and get it close.
-   * DO use AngularJS components, directives, filters, and services where applicable. 
-   * DO create the elements for the `share`, `edit`, `flag` links (below each answer) but DON'T worry about adding the functionality behind them.
-   * DO show the comment box when the user clicks "Add Comment" but DON'T worry about submitting to the server.
-   * DON'T worry about the hover effect tooltip cards for people and tags.
+
 
 ## The StackExchange API:
 
@@ -22,16 +17,15 @@ Here are some relevant API calls to get you started:
 * [https://api.stackexchange.com/2.2/questions/327738/comments?site=serverfault](https://api.stackexchange.com/2.2/questions/327738/comments?site=serverfault)
 * [https://api.stackexchange.com/2.2/questions/327738/related?site=serverfault](https://api.stackexchange.com/2.2/questions/327738/related?site=serverfault)
 
-The [StackExchange API documentation](https://api.stackexchange.com/docs) is quite good, reference it as needed. 
 
 The StackEchange API has a quota of 300 requests per day, so watch out for that. It will also throttle requests if you make too many too rapidly.
 
 
 ### Prerequisites
 
-First, install [Node.js](https://nodejs.org/en/download/) if necessary.
+First, install [Node.js](https://nodejs.org/en/download/) 
 
-Then install the project's dependencies:
+
 
 ```
 npm install
